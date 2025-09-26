@@ -3,133 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio | I Putu Arya Dipta Yudistira</title>
+  <title>Portofolio I Putu Arya Dipta Yudistira</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
-    /* Animasi gradient RGB header */
-    .rgb-header {
-      background: linear-gradient(270deg, #ff0000, #00ff00, #0000ff, #ff00ff);
-      background-size: 800% 800%;
-      animation: rgbMove 15s ease infinite;
+    /* Animasi gradasi RGB di header */
+    .rgb-bg {
+      background: linear-gradient(270deg, #ff0000, #00ff00, #0000ff, #ff00ff, #00ffff);
+      background-size: 1000% 1000%;
+      animation: rgbAnim 12s ease infinite;
     }
-    @keyframes rgbMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    /* Animasi teks berkilau */
-    .shine {
-      background: linear-gradient(90deg, #fff, #00f, #fff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shineAnim 3s linear infinite;
-      background-size: 200%;
-    }
-    @keyframes shineAnim {
-      from { background-position: 200%; }
-      to { background-position: -200%; }
+    @keyframes rgbAnim {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
   </style>
 </head>
-<body class="bg-gradient-to-r from-blue-50 to-blue-200 text-gray-800">
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition duration-500">
 
   <!-- Navbar -->
-  <nav class="rgb-header fixed w-full z-10 top-0 shadow-md">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center text-white">
-      <h1 class="text-2xl font-extrabold drop-shadow-lg">🌈 Portofolio</h1>
-      <ul class="flex space-x-6 font-semibold">
-        <li><a href="#home" class="hover:underline">Home</a></li>
-        <li><a href="#about" class="hover:underline">Tentang</a></li>
-        <li><a href="#projects" class="hover:underline">Projek</a></li>
-        <li><a href="#contact" class="hover:underline">Kontak</a></li>
-      </ul>
+  <nav class="bg-white shadow-md fixed w-full z-10 top-0 dark:bg-gray-800 transition duration-500">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+      <h1 class="text-xl font-bold text-blue-700 dark:text-blue-400">Portofolio</h1>
+      <div class="flex items-center gap-4">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#about" class="hover:text-blue-600">Tentang</a>
+        <a href="#projects" class="hover:text-blue-600">Project</a>
+        <a href="#contact" class="hover:text-blue-600">Kontak</a>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-6">
-    <img src="Poto.jpg" alt="Profile" class="w-44 h-44 rounded-full shadow-2xl mb-6 border-4 border-white hover:scale-110 transition duration-500" data-aos="zoom-in">
-    <h2 class="shine text-4xl md:text-5xl font-extrabold mb-4" data-aos="fade-up">I Putu Arya Dipta Yudistira</h2>
-    <p class="text-lg md:text-xl max-w-2xl" data-aos="fade-up" data-aos-delay="200">
-      Mahasiswa Universitas Pendidikan Ganesha (Undiksha)<br>
-      Fakultas Teknik dan Kejuruan | Jurusan TI | Prodi TRPL<br>
-      <span class="font-bold">NIM: 2455011002</span>
+  <section id="home" class="pt-28 rgb-bg text-white text-center p-10">
+    <img src="Poto.jpg" alt="I Putu Arya Dipta Yudistira"
+         class="w-40 h-40 object-cover mx-auto rounded-full border-4 border-white shadow-lg mb-4 transform hover:scale-110 transition duration-500"
+         data-aos="zoom-in">
+    <h1 class="text-4xl font-bold" data-aos="fade-up">I Putu Arya Dipta Yudistira</h1>
+    <p class="mt-2 text-lg font-light" data-aos="fade-up" data-aos-delay="200">NIM: 2455011002</p>
+    <p class="mt-2 text-lg" data-aos="fade-up" data-aos-delay="400">Mahasiswa Undiksha | FTK | TI | TRPL</p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-4xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold mb-6 text-center text-blue-700" data-aos="fade-right">Tentang Saya</h2>
+    <p class="text-center leading-relaxed" data-aos="fade-left">
+      Halo, saya <b>I Putu Arya Dipta Yudistira</b> (NIM: 2455011002).  
+      Mahasiswa <b>Undiksha</b>, Fakultas Teknik dan Kejuruan (FTK),  
+      Jurusan <b>Teknik Informatika</b>, Prodi <b>TRPL</b>.  
+      Saya menyukai pemrograman, pengembangan software, dan desain web modern.
     </p>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-white" data-aos="fade-right">
-    <div class="container mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-8 text-blue-600">Tentang Saya</h3>
-      <img src="Poto.jpg" alt="Foto Arya" class="w-32 h-32 rounded-full shadow-lg mx-auto mb-6">
-      <p class="max-w-3xl mx-auto leading-relaxed">
-       Hallo Teman" Perkenalkan Saya mahasiswa Prodi Teknologi Rekayasa Perangkat Lunak (TRPL) dengan minat besar dalam pengembangan aplikasi web modern. 
-        Portofolio ini berisi project yang saya buat selama perkuliahan, dengan fokus pada desain responsif, animasi, dan pemrograman berbasis JavaScript.
-      </p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-gradient-to-r from-blue-100 to-blue-300">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-10 text-blue-700 shine">Projek</h3>
-      <div class="grid md:grid-cols-2 gap-8">
-
-        <!-- Project 1 -->
-        <div class="bg-white rounded-2xl shadow-lg p-6 text-center transform hover:rotate-1 hover:scale-105 hover:shadow-2xl transition duration-500" data-aos="flip-left">
-          <h3 class="font-bold text-xl mb-2">Portofolio Pribadi</h3>
-          <p class="text-gray-700 mb-4">Portofolio saya </p>
-          <a href="#home" class="text-blue-600 hover:underline">Detail →</a>
+  <!-- Projects -->
+  <section id="projects" class="bg-gray-200 dark:bg-gray-800 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-blue-700 mb-10" data-aos="fade-up">Project Saya</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Portofolio -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 text-center hover:scale-105 transition" data-aos="flip-left">
+          <h3 class="font-bold text-xl mb-2">Portofolio Web</h3>
+          <p class="mb-4">Website portofolio dengan Tailwind CSS.</p>
+          <a href="portofolio.html" class="text-blue-600 hover:underline">Detail →</a>
         </div>
 
-        <!-- Project 2 (Kalkulator) -->
-        <div class="bg-white rounded-2xl shadow-lg p-6 text-center transform hover:-rotate-1 hover:scale-105 hover:shadow-2xl transition duration-500" data-aos="flip-right">
+        <!-- Kalkulator -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 text-center hover:scale-105 transition" data-aos="flip-left" data-aos-delay="200">
           <h3 class="font-bold text-xl mb-2">Tugas JavaScript</h3>
-          <p class="text-gray-700 mb-4">Contoh saya buat Kalkulator Sederhana </p>
-          <a href="kalkulator.html" class="text-blue-600 hover:underline">Detail →</a>
+          <p class="mb-4">Kalkulator sederhana (HTML + JS).</p>
+          <a href="kalkulator.html" class="text-blue-600 hover:underline">Buka Kalkulator →</a>
+        </div>
+
+        <!-- React Store -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 text-center hover:scale-105 transition" data-aos="flip-left" data-aos-delay="400">
+          <h3 class="font-bold text-xl mb-2">React Store</h3>
+          <p class="mb-4">Project toko online sederhana menggunakan React.</p>
+          <a href="https://react-store-taupe.vercel.app/" target="_blank" class="text-blue-600 hover:underline">Kunjungi →</a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-white" data-aos="fade-up">
-    <div class="container mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-6 text-blue-600">Kontak</h3>
-      <p class="mb-4">Silakan hubungi saya melalui WhatsApp atau Instagram:</p>
-      <div class="flex justify-center gap-6">
-        <!-- WhatsApp -->
-        <a href="https://wa.me/62895405373577" target="_blank"
-           class="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.648.5.5 5.648.5 12c0 2.114.551 4.173 1.593 5.993L.5 23.5l5.668-1.55A11.474 11.474 0 0 0 12 23.5c6.352 0 11.5-5.148 11.5-11.5S18.352.5 12 .5zm0 21a9.46 9.46 0 0 1-4.846-1.337l-.347-.207-3.365.918.9-3.283-.226-.377A9.466 9.466 0 0 1 2.5 12C2.5 6.753 6.753 2.5 12 2.5S21.5 6.753 21.5 12 17.247 21.5 12 21.5zm5.23-7.423c-.285-.143-1.693-.835-1.955-.93-.262-.095-.453-.143-.644.143-.19.285-.739.93-.905 1.118-.167.19-.334.214-.619.072-.285-.143-1.204-.444-2.292-1.415-.847-.756-1.42-1.689-1.587-1.974-.167-.285-.018-.439.125-.581.128-.128.285-.334.428-.5.143-.167.19-.285.285-.476.095-.19.048-.357-.024-.5-.072-.143-.644-1.55-.881-2.123-.232-.559-.468-.482-.644-.49h-.547c-.19 0-.5.072-.762.357-.262.285-1 1-1 2.438s1.024 2.834 1.167 3.033c.143.19 2.015 3.073 4.882 4.307.682.294 1.215.47 1.63.602.685.218 1.31.187 1.8.113.548-.081 1.693-.692 1.933-1.36.238-.667.238-1.238.167-1.36-.071-.119-.262-.19-.547-.333z"/></svg>
-          WhatsApp
-        </a>
-        <!-- Instagram -->
-        <a href="https://instagram.com/arryadpta" target="_blank"
-           class="flex items-center gap-2 bg-pink-500 text-white px-4 py-2 rounded-lg shadow hover:bg-pink-600 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0-2A7.5 7.5 0 0 0 0 7.5v9A7.5 7.5 0 0 0 7.5 24h9A7.5 7.5 0 0 0 24 16.5v-9A7.5 7.5 0 0 0 16.5 0h-9zM12 5.838a6.162 6.162 0 1 1 0 12.324 6.162 6.162 0 0 1 0-12.324zm0 2a4.162 4.162 0 1 0 0 8.324 4.162 4.162 0 0 0 0-8.324zM18.406 4.594a1.44 1.44 0 1 1-2.882 0 1.44 1.44 0 0 1 2.882 0z"/></svg>
-          Instagram
-        </a>
-      </div>
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-4 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6 text-blue-700" data-aos="fade-up">Kontak</h2>
+    <p class="mb-4" data-aos="fade-up" data-aos-delay="200">Hubungi saya melalui WhatsApp atau Instagram.</p>
+    <div class="flex justify-center gap-6">
+      <a href="https://wa.me/6281234567890" target="_blank" class="bg-green-500 text-white px-6 py-2 rounded-full shadow hover:bg-green-600 transition">WhatsApp</a>
+      <a href="https://instagram.com/usernamekamu" target="_blank" class="bg-pink-500 text-white px-6 py-2 rounded-full shadow hover:bg-pink-600 transition">Instagram</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="rgb-header text-white py-6 text-center">
-    <p class="animate-pulse">&copy; 2025 I Putu Arya Dipta Yudistira | Undiksha - TRPL</p>
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>© 2025 I Putu Arya Dipta Yudistira | NIM 2455011002 | Undiksha FTK TI TRPL</p>
   </footer>
 
-  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: false,
-    });
+    AOS.init({ duration: 1000, once: true });
   </script>
 </body>
 </html>
-
